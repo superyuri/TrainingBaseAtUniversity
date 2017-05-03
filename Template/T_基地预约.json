@@ -1,0 +1,20 @@
+[
+<stl:contents channelIndex="基地预约" >
+  <stl:if testType="ItemIndex" testOperate="Equals" testValue="1">
+    <stl:successTemplate>
+      {
+      "title":"{Content.Title}",
+      "start":"{Content.subtitle}",
+      "org":"{Content.Summary}"
+      }
+    </stl:successTemplate>
+    <stl:failureTemplate>
+      ,{
+      "title":"{Content.Title}",
+      "start":"{Content.subtitle}",
+      "org":"{Content.Summary}"
+      }
+    </stl:failureTemplate>
+  </stl:if>
+</stl:contents>
+]

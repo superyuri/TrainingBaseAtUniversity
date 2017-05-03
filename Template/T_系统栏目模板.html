@@ -1,0 +1,50 @@
+<stl:include file="/include/header.html"></stl:include>
+
+                <div class="col-md-9 col-sm-9 col-xs-12 inform-right">
+                    <stl:pageContents pageNum="10">
+                        <div class="session session1">
+                                <div>
+                                <h3>
+                                    <stl:a>
+                                        <stl:content type="Title" wordNum="25"></stl:content>
+                                    </stl:a>
+                                </h3>
+                                <span>{content.LastEditDate}&nbsp;&nbsp;来源：{content.source}</span>
+                                <p>
+                                    <stl:content type="content" wordNum="90" isClearTags="true"></stl:content>
+                                </p>
+                                </div>
+                            </div>
+                    </stl:pageContents>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row paging">
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                        <ul class="pagination">
+                    <stl:pageItems>
+
+                        <li><a href="{PageItem.FirstPage}">第一页</a></li>
+                        <li><a href="{PageItem.PreviousPage}">上一页</a></li>
+                        <stl:pageItem type="PageNavigation" listNum="6">
+
+                            <stl:successTemplate>
+                                <li><a href="{Current.Url}">{Current.Num}</a></li>
+                            </stl:successTemplate>
+                            <stl:failureTemplate>
+                                <li><a class="on" style="color:#F00">{Current.Num}</a></li>
+                            </stl:failureTemplate>
+
+                        </stl:pageItem>
+                        <li><a href="{PageItem.NextPage}">下一页</a></li>
+                        <li><a href="{PageItem.LastPage}">末页</a></li>
+
+                    </stl:pageItems>
+                        </ul>
+                    </div>
+                <div>
+            </div>
+        </div>
+
+<stl:include file="/include/footer.html"></stl:include>

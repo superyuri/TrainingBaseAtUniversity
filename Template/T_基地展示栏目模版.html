@@ -1,0 +1,81 @@
+<stl:include file="/include/header.html"></stl:include>
+
+<div class="col-md-9 col-sm-9 col-xs-12 inform-right">
+    <div class="session-part col-md-12 col-sm-12 col-xs-12" id="slides">
+        <ul>
+            <stl:contents channelIndex="基地展示">
+                <li class="slide-item">
+                    <div class="p-main col-md-12 col-sm-12 col-xs-12">
+                        <div class="p-left col-md-7 col-sm-7 col-xs-12">
+                            <img class="img-responsive center-block" src="{content.imageUrl}" alt="" />
+                        </div>
+                        <div class="p-right col-md-5 col-sm-5 col-xs-12">
+                            <h4>{content.title}</h4>
+                            <p style="text-indent:0;">{content.summary}</p>
+                            <span style="text-align:left;">{content.LastEditDate}</span>
+                            <span style="text-align:left;">来源：{content.source}</span>
+                        </div>
+                    </div>
+                </li>
+            </stl:contents>
+        </ul>
+      <div class="scro-focus-ctrl" id="scro-focus-prev"><b></b></div>            
+      <div class="scro-focus-ctrl" id="scro-focus-next"><b></b></div>
+        <!--<div class="p-bottom col-md-12 col-sm-12 col-xs-12">
+            <span style="line-height:50px; margin-bottom:0;">1/12</span>
+        </div>-->
+
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<stl:include file="/include/footer.html"></stl:include>
+
+  <script type="text/javascript">
+        //焦点图渐变切换
+        $(function () {
+            var len = $("#slides ul li").length;
+            var index = 0;
+            var picTimer;
+            var btn = '<ol style="display:none">';
+            for (var i = 1; i <= len; i++) {
+                btn += "<li>" + i + "</li>";
+            }
+            btn += "</ol>";
+            var bs = '<span class="slidelocal">1/'+len+'</span>';
+            $('#slides').append(btn);
+            $('#slides').append(bs);
+            $("#slides ul li").eq(0).show();
+            $("#slides ol li").mouseover(function () {
+                index = $("#slides ol li").index(this);
+                showPics(index);
+            }).eq(0).trigger("mouseover");
+
+            var widthW = $(window).width();
+            
+
+            function showPics(index) {
+                $("#slides ul li").eq(index).fadeIn().siblings().fadeOut();
+                $("#slides ol li").removeClass("cur").eq(index).addClass("cur");
+            }
+
+            $("#scro-focus-prev").click(function () {
+                index--;
+                index = (index + len) % len;
+                showPics(index);
+                var tlocal=index+1;
+                $(".slidelocal").html(tlocal+'/'+len);
+            })
+            $("#scro-focus-next").click(function () {
+                index++;
+                index = (index + len) % len;
+                showPics(index);
+                var tlocal=index+1;
+                $(".slidelocal").html(tlocal+'/'+len);
+            })
+        });
+    </script>
