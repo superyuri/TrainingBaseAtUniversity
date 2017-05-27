@@ -1,389 +1,641 @@
-﻿<stl:include file="/include/top.html"></stl:include>
-
+<stl:include file="/include/top.html">
+</stl:include>
+<script type="text/javascript" src="{stl.siteurl}/js/jquery.SuperSlide.2.1.1.js"></script>
 <div class="row" style="position:relative">
-  <div class="banner-top">
-    <div class="banner col-md-12 col-sm-12 col-xs-12" style="padding:0">
-      <img class="img-responsive center-block" src="{stl.siteurl}/image_replace/banner-ss.jpg" alt="banner" />
-      
-    </div>
-    <div class="notice col-xs-12">
-      <div class="news">
-        <div class="n-banner">
-          <stl:contents channelIndex="基地简介" totalNum="1">
-            <img class="img-responsive center-block" src="{stl.siteurl}/image_replace/BaseIntro.jpg" alt="intro" />
-            <div class="n-main">
-              <h3>基地简介</h3>
-              <img src="{stl.siteurl}/images/intro-line.png" alt="" />
-              <p>{content.summary}</p>
-              <stl:a channelIndex="基地简介">查看更多&gt;&gt;</stl:a>
-            </div>
-          </stl:contents>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <div class="banner-top">
+        <div class="banner col-md-12 col-sm-12 col-xs-12" style="padding:0">
+            <img class="img-responsive center-block" src="{stl.siteurl}/image_replace/banner-ss.jpg" alt="banner" />
 
-<div class="row">
-  <div class="container">
-    <div class="base col-md-12 col-sm-12 col-xs-12">
-      <div class="b-main col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-        <div class="b-active col-md-7 col-sm-12 col-xs-12" style="padding:0;">
-          <div class="row">
-            <div class="b-header col-md-12 col-sm-12 col-xs-12">
-              <h4>基地动态</h4>
-              <stl:a channelIndex="基地动态">查看更多&gt;&gt;</stl:a>
+        </div>
+        <div class="notice col-xs-12">
+            <div class="news">
+                <div class="n-banner">
+                    <stl:contents channelIndex="基地简介" totalNum="1">
+                        <img class="img-responsive center-block" src="{stl.siteurl}/image_replace/BaseIntro.jpg" alt="intro" />
+                        <div class="n-main">
+                            <h3>基地简介</h3>
+                            <img src="{stl.siteurl}/images/intro-line.png" alt="" />
+                            <p>{content.summary}</p>
+                            <hr>
+                            <stl:a channelIndex="基地简介">查看更多&gt;&gt;</stl:a>
+                        </div>
+                    </stl:contents>
+                </div>
             </div>
-            <div class="a-main col-md-12 col-sm-12 col-xs-12">
-              <!--<div class="a-left col-md-5 col-sm-4 col-xs-12">
+        </div>
+    </div>
+</div>
+<!--基地动态，基地展示-->
+<div class="row">
+    <div class="container">
+        <div class="base col-md-12 col-sm-12 col-xs-12">
+            <div class="b-main col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                <div class="b-active col-md-7 col-sm-12 col-xs-12" style="padding:0;">
+                    <div class="row">
+                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                            <h4>基地动态</h4>
+                            <stl:a channelIndex="基地动态">查看更多&gt;&gt;</stl:a>
+                        </div>
+                        <div class="a-main col-md-12 col-sm-12 col-xs-12">
+                            <!--<div class="a-left col-md-5 col-sm-4 col-xs-12">
               <img class="img-responsive center-block" src="{stl.siteurl}/images/active.jpg" alt="" />
             </div>-->
-              <div  class="scro-focus scro-focus1">
-                <ul> 
-                  
-                  <stl:contents channelIndex="基地动态" isimage="true" totalNum="5">
-                    <li>
-                       <a href="{content.NavigationUrl}" title="{content.Title}">
-                        <div class="scro-blo">
-                          <div class="scro-img">
-                           <img src="{content.ImageUrl}" alt="{content.FullTitle}" />
-                          </div>
-                          <div class="scrodes"><stl:content type="Title"></stl:content></div>
-                        </div>
-                      </a>
-                    </li>
-                  </stl:contents>
-                </ul>
-              </div>
-              <div class="a-right col-md-7 col-sm-8 col-xs-12">
-                <ul class="col-md-12 col-sm-12 col-xs-12">
-                  <!-- 基地动态置顶 -->
-                  <stl:contents ChannelIndex="基地动态" totalNum="1" isTop="true">
-                    <h5 class="text-center">
-                      <stl:a>
-                        <stl:content type="Title" wordNum="20"></stl:content>
-                      </stl:a>
-                    </h5>
-                  </stl:contents>
-                  <!-- 基地动态 -->
-                  <stl:contents ChannelIndex="基地动态" totalNum="6" isTop="false">
-                    <li>
-                      <stl:a>
-                        <stl:content type="Title" wordNum="18"></stl:content>
-                      </stl:a>
-                      <span>{content.LastEditDate}</span>
-                    </li>
-                  </stl:contents>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="b-show col-md-4 col-md-offset-1 col-sm-12 col-xs-12">
-          <div class="row">
-            <div class="b-header col-md-12 col-sm-12 col-xs-12">
-              <h4>基地展示</h4>
-              <stl:a channelIndex="基地展示">查看更多&gt;&gt;</stl:a>
-            </div>
-            <!--基地展示轮播-->
-            <div class="a-main col-md-12 col-sm-12 col-xs-12">
-              <div  class="scro-focus scro-focus2">
-                <ul> 
+                            <div class="scro-focus scro-focus1">
+                                <ul>
 
-                  <stl:contents channelIndex="基地展示" isimage="true" totalNum="5">
-                    <li>
-                       
-                        <div class="scro-blo">
-                          <div class="scro-img">
-                           <img src="{content.ImageUrl}" alt="{content.FullTitle}" />
-                          </div>
-                          <div class="scrodes"><stl:content type="Title"></stl:content></div>
+                                    <stl:contents channelIndex="基地动态" isimage="true" totalNum="5">
+                                        <li>
+                                            <a href="{content.NavigationUrl}" title="{content.Title}">
+                                                <div class="scro-blo">
+                                                    <div class="scro-img">
+                                                        <img src="{content.ImageUrl}" alt="{content.FullTitle}" />
+                                                    </div>
+                                                    <div class="scrodes">
+                                                        <stl:content type="Title"></stl:content>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </stl:contents>
+                                </ul>
+                            </div>
+                            <div class="a-right col-md-7 col-sm-8 col-xs-12">
+                                <ul class="col-md-12 col-sm-12 col-xs-12">
+                                    <!-- 基地动态置顶 -->
+                                    <stl:contents ChannelIndex="基地动态" totalNum="1" isTop="true">
+                                        <h5 class="text-center">
+                                            <stl:a>
+                                                <stl:content type="Title" wordNum="20"></stl:content>
+                                            </stl:a>
+                                        </h5>
+                                    </stl:contents>
+                                    <!-- 基地动态 -->
+                                    <stl:contents ChannelIndex="基地动态" totalNum="6" isTop="false">
+                                        <li>
+                                            <stl:a>
+                                                <stl:content type="Title" wordNum="18"></stl:content>
+                                            </stl:a>
+                                            <span>{content.LastEditDate}</span>
+                                        </li>
+                                    </stl:contents>
+                                </ul>
+                            </div>
                         </div>
-                      
-                    </li>
-                  </stl:contents>
-                </ul>
-              </div>
-            <div>
-            <!--基地展示轮播-->
-            <!--<div class="a-main col-md-12 col-sm-12 col-xs-12">
-              <img class="img-responsive center-block" src="{stl.siteurl}/image_replace/show350x200.jpg" alt="" />
-              <p class="text-center">基地主体展示</p>-->
+                    </div>
+                </div>
+                <div class="b-show col-md-4 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                            <h4>基地展示</h4>
+                            <stl:a channelIndex="基地展示">查看更多&gt;&gt;</stl:a>
+                        </div>
+                        <!--基地展示轮播-->
+                        <!-- <div class="a-main col-md-12 col-sm-12 col-xs-12">
+                            <div class="scro-focus scro-focus2">
+                                <ul>
+
+                                    <stl:contents channelIndex="基地展示" isimage="true" totalNum="5">
+                                        <li>
+
+                                            <div class="scro-blo">
+                                                <div class="scro-img">
+                                                    <img src="{content.ImageUrl}" alt="{content.FullTitle}" />
+                                                </div>
+                                                <div class="scrodes">
+                                                    <stl:content type="Title"></stl:content>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </stl:contents>
+                                </ul>
+                            </div>
+                            <div> -->
+                                <!--基地展示轮播-->
+                                <div class="a-main col-md-12 col-sm-12 col-xs-12" id="slidess">
+                                    <ul>
+                                        <stl:contents channelIndex="基地展示" isimage="true" totalNum="5">
+                                        <li class="slide-item">
+                                            <img class="img-responsive center-block" src="{content.ImageUrl}" alt="{content.FullTitle}" />
+                                            <p class="text-center"><stl:content type="Title"></stl:content></p>
+                                        </li>
+                                        </stl:contents>
+                                    </ul>
+                                   <div class="scro-focus-ctrl" id="scro-focus-prev"><b></b></div>            
+                                   <div class="scro-focus-ctrl" id="scro-focus-next"><b></b></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+<!--基地课程-->
+<!--div class="row">
+    <div class="container">
+        <div class="base col-md-12 col-sm-12 col-xs-12">
+            <div class="b-main col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                <div class="b-show col-md-4 col-md-offset-1 col-sm-12 col-xs-12" style="float:left">
+                    <div class="row">
+                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                            <h4>热门课程</h4>
+                            <stl:a channelIndex="基地课程">查看更多&gt;&gt;</stl:a>
+                        </div>
+                        <div class="a-cen-course col-md-7 col-sm-8 col-xs-12">
+                            <ul class="col-md-12 col-sm-12 col-xs-12">
+                                <stl:contents ChannelIndex="基地课程" totalNum="8" isTop="false">
+                                    <li>
+                                        <stl:a>
+                                            <stl:content type="Title" wordNum="18"></stl:content>
+                                        </stl:a>
+                                    </li>
+                                </stl:contents>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-active col-md-7 col-sm-12 col-xs-12" style="float:right;padding:0">
+                    <div class="row">
+                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                            <h4>基地课程</h4>
+                            <stl:a channelIndex="基地课程">查看更多&gt;&gt;</stl:a>
+                        </div>
+                        <div class="a-main col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="scro-focus scro-focus3">
+                                <ul>
+                                    <stl:contents ChannelIndex="基地课程" totalNum="5">
+                                        <li>
+                                            <div class="scro-blo">
+                                                <div class="scro-img">
+                                                    <img src="{content.imageUrl}" alt="{content.title}">
+                                                </div>
+                                                <div class="scrodes">
+                                                    <strong><stl:content type="title"></stl:content></strong>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </stl:contents>
+
+                                </ul>
+                            </div>
+                            <div class="a-right col-md-7 col-sm-8 col-xs-12">
+                                <ul class="col-md-12 col-sm-12 col-xs-12">
+                                    <!-- 基地课程置顶 -->
+                                    <!--stl:contents ChannelIndex="基地课程" totalNum="1" isTop="true">
+                                        <h5 class="text-center">
+                                            <stl:a>
+                                                <stl:content type="Title" wordNum="20"></stl:content>
+                                            </stl:a>
+                                        </h5>
+                                    </stl:contents>
+                                    <!-- 基地课程 -->
+                                    <!--stl:contents ChannelIndex="基地课程" totalNum="6">
+                                        <li>
+                                            <stl:a>
+                                                <stl:content type="Title" wordNum="20"></stl:content>
+                                            </stl:a>
+                                        </li>
+                                    </stl:contents>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 校企合作 -->
+<!--div class="row">
+    <div class="container">
+        <div class="base col-md-12 col-sm-12 col-xs-12">
+            <div class="b-main col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                <div class="b-active col-md-7 col-sm-12 col-xs-12" style="padding:0;">
+                    <div class="row">
+                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                            <h4>校企合作</h4>
+                            <stl:a channelIndex="校企合作">查看更多&gt;&gt;</stl:a>
+                        </div>
+                        <div class="a-main col-md-12 col-sm-12 col-xs-12">
+                            <div class="scro-focus scro-focus4">
+                                <ul>
+                                    <stl:contents ChannelIndex="校企合作" totalNum="5">
+                                        
+                                        <li style="display: none;">
+                                            <stl:a title="{content.title}">
+                                                <div class="scro-blo">
+                                                    <div class="scro-img">
+                                                        <img src="{content.imageUrl}" alt="{content.title}">
+                                                    </div>
+                                                    <div class="scrodes">
+                                                        <stl:content type="title" WordNum=""></stl:content>
+                                                    </div>
+                                                </div>
+                                            </stl:a>
+                                        </li>
+                                    </stl:contents>
+                                </ul>
+                            </div>
+                            <div class="a-right col-md-7 col-sm-8 col-xs-12">
+                                <ul class="col-md-12 col-sm-12 col-xs-12">
+                                    <!-- 校企合作置顶 -->
+                                    <!--stl:contents ChannelIndex="校企合作" totalNum="1" isTop="true">
+                                        <h5 class="text-center">
+                                            <stl:a>
+                                                <stl:content type="Title" wordNum="20"></stl:content>
+                                            </stl:a>
+                                        </h5>
+                                    </stl:contents>
+                                    <!-- 校企合作 -->
+                                    <!--stl:contents ChannelIndex="校企合作" totalNum="6">
+                                        <li>
+                                            <stl:a>
+                                                <stl:content type="Title" wordNum="20"></stl:content>
+                                            </stl:a>
+                                        </li>
+                                    </stl:contents>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-show col-md-4 col-md-offset-1 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                            <h4>企业需求</h4>
+                            <stl:a channelIndex="企业需求">查看更多&gt;&gt;</stl:a>
+                        </div>
+                        <div class="a-cen-course col-md-7 col-sm-8 col-xs-12">
+                            <ul class="col-md-12 col-sm-12 col-xs-12">
+                                <stl:contents ChannelIndex="企业需求" totalNum="7">
+                                    <li>
+                                        <stl:a>
+                                            <stl:content type="title" WordNum="20"></stl:content>
+                                        </stl:a>
+                                    </li>
+                                </stl:contents>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div-->
+
+<div class="row">
+    <div class="container">
+        <div class="build col-md-12 col-sm-12 col-xs-12">
+            <div class="b-base col-md-8 col-md-offset-2 col-sm-12 col-xs-12" style="padding:0">
+                <div class="row">
+                    <div class="b-plan col-md-12 col-sm-12 col-xs-12" style="padding:0;">
+                        <h2 class="text-center">实训培训项目及线上预约</h2>
+                        <span>{stl.BaseName}</span>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="table-responsive">
+                        <table class="table planning-table">
+                            <tr style="background-color:#F0F0F0;border-bottom:2px solid #fff;">
+                                <th>项目名称</th>
+                                <th>项目简介</th>
+                                <th>容纳人数</th>
+                                <th>培训规格</th>
+                                <th>主要设备</th>
+                            </tr>
+                            <tr style="background-color:#EAF8FE;">
+                                <stl:contents channelIndex="培训项目">
+                                    <td>
+                                        <stl:content type="projectname"></stl:content>
+                                    </td>
+                                    <td width="500px">
+                                        <stl:content type="introduction"></stl:content>
+                                    </td>
+                                    <td>
+                                        <stl:content type="number"></stl:content>
+                                    </td>
+                                    <td>
+                                        <stl:content type="standard"></stl:content>
+                                    </td>
+                                    <td>
+                                        <stl:content type="equipment"></stl:content>
+                                    </td>
+                                </stl:contents>
+                            </tr>
+                        </table>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="cour-List">
+                        <ul>
+                            <stl:contents ChannelIndex="实训培训项目">
+                                <li class="cour-list-item">
+                                    <div class="c-item-img"><a href="{content.NavigationUrl}" title="{content.Title}"><img src="{content.ImageUrl}"></a></div>
+                                    <h4 class="c-item-name"><a href="{content.NavigationUrl}" title="{content.Title}"><stl:content type="Title" WordNum="12"></stl:content></a></h4>
+                                    <p class="c-item-school"><stl:content type="Number" WordNum=""></stl:content>人 / <stl:content type="ClassesTime"></stl:content> 课时</p>
+                                    <!--p class="c-item-uname">目标：<stl:content type="Achievements" WordNum="20"></stl:content></p-->
+                                </li>
+                            </stl:contents>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="row">
-  <div class="container">
-    <div class="build col-md-12 col-sm-12 col-xs-12">
-      <div class="b-base col-md-8 col-md-offset-2 col-sm-12 col-xs-12" style="padding:0">
-        <div class="row">
-          <div class="bb-header col-md-12 col-sm-12 col-xs-12" style="padding:0">
-            
-            <h2 class="text-center">建设基础</h2>
-            <span>教师信息技术综合实验实训平台</span>
-            
-          </div>
-        </div>
-        <div class="row">
-          <div class="table-responsive">
-            <table class="table base-table col-md-12">
-              <tr style="background-color:#F0F0F0;border-bottom:2px solid #fff;">
-                
-                <th class="col-md-1">面积</th>
-                <th class="col-md-1">投入设备总值</th>
-                <th class="col-md-1">服务产业</th>
-                <th class="col-md-5">模块</th>
-                <th class="col-md-1">容纳人数</th>
-                <th class="col-md-2" style="padding:0">
-                  <table class="col-md-12">
-                    <tr style="padding:0;">
-                      <th class="col-md-12" colspan="2" style="border-right:none;border-bottom:1px solid #DEDEDE;">已培训</th>
-                    </tr>
-                    <tr style="padding:0;">
-                      <th class="col-md-6" style="border-right: 1px solid #DEDEDE;">在校生</th>
-                      <th class="col-md-6" style="border-right:none;">企业员工</th>
-                    </tr>
-                  </table>
-                </th>
-                <th class="col-md-1">启用时间</th>
-                
-              </tr>
-              <tr style="background-color:#EAF8FE;">
-                <stl:contents channelIndex="建设基础">
-                  <td class="col-md-1"><stl:content type="area"></stl:content></td>
-                  <td class="col-md-1"><stl:content type="value"></stl:content></td>
-                  <td class="col-md-1"><stl:content type="service"></stl:content></td>
-                  <td class="col-md-5" style="text-align:left;"><stl:content type="model"></stl:content></td>
-                  <td class="col-md-1"><stl:content type="number"></stl:content></td>
-                  <td class="col-md-2">
-                    <table class="col-md-12">
-                      <tr>
-                        <td class="col-md-6" style="border-right: 1px solid #DEDEDE;line-height:64px;"><stl:content type="student"></stl:content></td>
-                        <td class="col-md-6" style="border-right:none;line-height:64px;"><stl:content type="employee"></stl:content></td>
-                      </tr>
-                    </table>
-                  </td>
-                  <td class="col-md-1"><stl:content type="startTime"></stl:content></td>
-                </stl:contents>
-              </tr>
-              
-            </table>
-          </div>
-        </div>
-        <div class="row">
-          <div class="b-plan col-md-12 col-sm-12 col-xs-12" style="padding:0;">
-            <h2 class="text-center">建设规划</h2>
-            <span>教师信息技术综合实训基地</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="table-responsive">
-            <table class="table planning-table">
-              <tr style="background-color:#F0F0F0;border-bottom:2px solid #fff;">
-                <th>面向产业</th>
-                <th>新增面积</th>
-                <th>拟增设备金额</th>
-                <th>增设生产线、模块</th>
-                <th>净增容纳人数</th>
-                <th>建成后容纳总人数</th>
-              </tr>
-              <tr style="background-color:#EAF8FE;">
-                <stl:contents channelIndex="建设规划">
-                  <td><stl:content type="industry"></stl:content></td>
-                  <td><stl:content type="newarea"></stl:content></td>
-                  <td><stl:content type="amount"></stl:content></td>
-                  <td style="text-align:left;"><stl:content type="module"></stl:content></td>
-                  <td><stl:content type="number"></stl:content></td>
-                  <td><stl:content type="total"></stl:content></td>
-                </stl:contents>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="row">
-          <div class="b-plan col-md-12 col-sm-12 col-xs-12" style="padding:0;">
-            <h2 class="text-center">培训项目</h2>
-            <span>教师信息技术综合实训培训基地</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="table-responsive">
-            <table class="table planning-table">
-              <tr style="background-color:#F0F0F0;border-bottom:2px solid #fff;">
-                <th>项目名称</th>
-                <th>项目简介</th>
-                <th>容纳人数</th>
-                <th>培训规格</th>
-                <th>主要设备</th>
-              </tr>
-              <tr style="background-color:#EAF8FE;">
-                <stl:contents channelIndex="培训项目">
-                  <td><stl:content type="projectname"></stl:content></td>
-                  <td width="500px"><stl:content type="introduction"></stl:content></td>
-                  <td><stl:content type="number"></stl:content></td>
-                  <td><stl:content type="standard"></stl:content></td>
-                  <td><stl:content type="equipment"></stl:content></td>
-                </stl:contents>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="row">
-          <div class="b-plan col-md-12 col-sm-12 col-xs-12" style="padding:0;">
-            <h2 class="text-center">线上虚拟系统</h2>
-            <span>教师信息技术综合实训培训基地</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="table-responsive">
-            <table class="table planning-table">
-              <tr style="background-color:#F0F0F0;border-bottom:2px solid #fff;">
-                <th>项目名称</th>
-                <th>项目地址</th>
-                <th>使用说明</th>
-              </tr>
-              <tr style="background-color:#EAF8FE;">
-                <stl:contents channelIndex="线上虚拟系统">
-                  <td><stl:content type="title"></stl:content></td>
-                  <td><a href="{content.subtitle}" target="_blank">{content.subtitle}</a></td>
-                  <td><a href="{content.fileurl}" target="_blank">下载</a></td>
-                </stl:contents>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
+    <div class="container col-md-12 col-sm-12 col-xs-12 build">
+        <div class="b-base">
+            <div class="spec-c-con">
+                <div class="k-main">
+                    <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                        <h4>未开发项目提交</h4>
+                        <p>{stl.BaseName}为企业提供<span class="spec-strong">专业、高效、准确</span>的实训资源</p>
+                    </div>
+                </div>
+                <div class="kk-main">
+                    <div class="b-content col-md-12 col-sm-12 col-xs-12">
+                        <div class="b-con-lf">
+                           <img src="{stl.siteurl}/images/banner-tjsq.jpg" class="b-con-img">
+                           <a href="{stl.siteurl}/single/requirement.html" class="btn submit-lbtn">提交申请</a>
+                        </div>
+                        <div class="b-con-rig">
+                            <ul class="xm-list">
+                                <stl:contents ChannelIndex="已开发项目链接" totalNum="7">
+                                    <li>
+                                        <p class="xm-tit"><a href="{content.Link}">项目：<span>{content.title}</span></a></p>
+                                        <p class="xm-model">{content.Number}人 / {content.ClassesTime} 课时</p>
+                                        <a href="{content.Link}" class="xm-look">了解详情</a>
+                                    </li>
+                                </stl:contents>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+     </div>
     </div>
-  </div>
 </div>
+
+<!-- 校企合作 -->
 <div class="row">
-  <footer class="col-md-12 col-sm-12 col-xs-12" style="padding:0">
-    <nav class="navbar navbar-default">
-      <p class="text-center">辽宁省教育厅 高等教育处 版权所有 Copyright © 2017 All rights reserved.</p>
-    </nav>
-  </footer>
+    <div class="container col-md-12 col-sm-12 col-xs-12 build">
+        <div class="b-base">
+            <div class="spec-c-con">
+                <div class="p-main">
+                    <div class="b-header col-md-12 col-sm-12 col-xs-12">
+                        <h4>校企合作</h4>
+                    </div>
+                </div>
+                <div class="pp-main">
+                    <div class="b-content col-md-12 col-sm-12 col-xs-12">
+                     <div class="picScroll-left">
+                        <div class="hd">
+                            <a class="next"></a>
+                            <ul></ul>
+                            <a class="prev"></a>
+                            <span class="pageState"></span>
+                        </div>
+                        <div class="bd">
+                            <ul class="picList">
+                                <stl:contents ChannelIndex="校企合作" totalNum="10">
+                                    <li>
+                                        <div class="pic"><img src="{content.imageUrl}" /></div>
+                                    </li>
+                                </stl:contents>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+     </div>
+    </div>
 </div>
+
+<div class="row">
+    <footer class="col-md-12 col-sm-12 col-xs-12" style="padding:0">
+        <nav class="navbar navbar-default">
+            <p class="text-center">辽宁省教育厅 高等教育处 版权所有 Copyright © 2017 All rights reserved.</p>
+        </nav>
+    </footer>
 </div>
 </body>
 <script type="text/javascript">
-  // $(document).ready(function () {       
-  // var ww = $(window).width();
-  // if (ww >= 320 && ww <= 414) {
-  //    $('.notice').css('position', 'static');
-  //    $('.notice').css('top', '0');
-  //    $('.notice').css('left', '0');
-  //   $('.notice').css('width', '100%');
-  //   $('.notice').css('height', 'auto');
-  //   $('.notice').css('margin', '0 auto');
-  // }
-  // if (ww > 414 && ww <= 768) {
-  //     $('.notice').css('top', '161px');
-  //     $('.notice').css('left', '500px');
-  //     $('.notice').css('width', '35%');
-  //     $('.notice').css('height', '200px');
-  //   $('.notice').css('overflow', 'auto');
-  //   $('.notice').css('margin', '');
-  //}
-  // }); 
-  //顶部图片居中
-  window.onload = window.onresize = function () {
-  
-  var windowW = $(window).width();
-  if (windowW > 1920) {
-  $(".banner .center-block").attr("width", '1920px');
-  $('.notice').css("left", 780 + 360 );
-  }
-  else if (windowW <= 1920 && windowW > 1200) {
-  var marLf = -(1920 - windowW) / 2;
-  var marff = (windowW - 1200) / 2;
-  $(".banner .center-block").css("margin-left", marLf);
-  $('.notice').css("left", 780 + marff );
-  }
-  else if (windowW <= 1200 && windowW > 1024) {
-  $(".banner .center-block").css("margin-left", '-360px');
-  $('.notice').css("left", '780px');
-  }
-  
-  }
-  </script>
-<script type = "text/javascript" > //基地动态滚动
-$(function() {
-    var len = $(".scro-focus1 ul li").length;
-    var index = 0;
-    var picTimer;
-    var btn = '<ol>';
-    for (var i = 1; i <= len; i++) {
-        btn += "<li>" + i + "</li>";
-    }
-    btn += "</ol>";
-    $('.scro-focus1').append(btn);
-    $(".scro-focus1 ul li").eq(0).show();
-    $(".scro-focus1 ol li").mouseover(function() {
-        index = $(".scro-focus1 ol li").index(this);
-        showPics(index);
-    }).eq(0).trigger("mouseover");
+   jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,vis:4});
+    </script>
+<script type="text/javascript">
+    // $(document).ready(function () {       
+    // var ww = $(window).width();
+    // if (ww >= 320 && ww <= 414) {
+    //    $('.notice').css('position', 'static');
+    //    $('.notice').css('top', '0');
+    //    $('.notice').css('left', '0');
+    //   $('.notice').css('width', '100%');
+    //   $('.notice').css('height', 'auto');
+    //   $('.notice').css('margin', '0 auto');
+    // }
+    // if (ww > 414 && ww <= 768) {
+    //     $('.notice').css('top', '161px');
+    //     $('.notice').css('left', '500px');
+    //     $('.notice').css('width', '35%');
+    //     $('.notice').css('height', '200px');
+    //   $('.notice').css('overflow', 'auto');
+    //   $('.notice').css('margin', '');
+    //}
+    // }); 
+    //顶部图片居中
+    window.onload = window.onresize = function () {
 
-    $(".scro-focus1 ul").hover(function() {
-        clearInterval(picTimer);
-    },
-    function() {
-        picTimer = setInterval(function() {
+        var windowW = $(window).width();
+        if (windowW > 1920) {
+            $(".banner .center-block").attr("width", '1920px');
+            $('.notice').css("left", 780 + 360);
+        }
+        else if (windowW <= 1920 && windowW > 1200) {
+            var marLf = -(1920 - windowW) / 2;
+            var marff = (windowW - 1200) / 2;
+            $(".banner .center-block").css("margin-left", marLf);
+            $('.notice').css("left", 780 + marff);
+        }
+        else if (windowW <= 1200 && windowW > 1024) {
+            $(".banner .center-block").css("margin-left", '-360px');
+            $('.notice').css("left", '780px');
+        }
+
+    }
+
+</script>
+<script type="text/javascript">
+    //基地动态滚动
+    $(function () {
+        var len = $(".scro-focus1 ul li").length;
+        var index = 0;
+        var picTimer;
+        var btn = '<ol>';
+        for (var i = 1; i <= len; i++) {
+            btn += "<li>" + i + "</li>";
+        }
+        btn += "</ol>";
+        $('.scro-focus1').append(btn);
+        $(".scro-focus1 ul li").eq(0).show();
+        $(".scro-focus1 ol li").mouseover(function () {
+            index = $(".scro-focus1 ol li").index(this);
             showPics(index);
-            index++;
-            if (index == len) {
-                index = 0;
-            }
+        }).eq(0).trigger("mouseover");
+
+        $(".scro-focus1 ul").hover(function () {
+            clearInterval(picTimer);
         },
-        3000);
-    }).trigger("mouseleave");
+            function () {
+                picTimer = setInterval(function () {
+                    showPics(index);
+                    index++;
+                    if (index == len) {
+                        index = 0;
+                    }
+                },
+                    3000);
+            }).trigger("mouseleave");
 
-    function showPics(index) {
-        $(".scro-focus1 li").eq(index).fadeIn().siblings().fadeOut();
-        $(".scro-focus1 ol li").removeClass("cur").eq(index).addClass("cur");
-    }
+        function showPics(index) {
+            $(".scro-focus1 li").eq(index).fadeIn().siblings().fadeOut();
+            $(".scro-focus1 ol li").removeClass("cur").eq(index).addClass("cur");
+        }
 
-    var len2 = $(".scro-focus2 ul li").length;
-    var index2 = 0;
-    var picTimer2;
-    var btn2 = '<ol>';
-    for (var i = 1; i <= len2; i++) {
-        btn2 += "<li>" + i + "</li>";
+      
+
+        var len3 = $(".scro-focus3 ul li").length;
+        var index3 = 0;
+        var picTimer3;
+        var btn3 = '<ol>';
+        for (var i = 1; i <= len3; i++) {
+            btn3 += "<li>" + i + "</li>";
+        }
+        btn3 += "</ol>";
+        $('.scro-focus3').append(btn3);
+        $(".scro-focus3 ul li").eq(0).show();
+        $(".scro-focus3 ol li").mouseover(function () {
+            index3 = $(".scro-focus3 ol li").index(this);
+            showPics3(index3);
+        }).eq(0).trigger("mouseover");
+
+        $(".scro-focus3 ul").hover(function () {
+            clearInterval(picTimer3);
+        },
+            function () {
+                picTimer3 = setInterval(function () {
+                    showPics3(index3);
+                    index3++;
+                    if (index3 == len3) {
+                        index3 = 0;
+                    }
+                },
+                    3000);
+            }).trigger("mouseleave");
+
+        function showPics3(index) {
+            $(".scro-focus3 li").eq(index).fadeIn().siblings().fadeOut();
+            $(".scro-focus3 ol li").removeClass("cur").eq(index).addClass("cur");
+        }
+    });
+
+    var len4 = $(".scro-focus4 ul li").length;
+    var index4 = 0;
+    var picTimer4;
+    var btn4 = '<ol>';
+    for (var i = 1; i <= len4; i++) {
+        btn4 += "<li>" + i + "</li>";
     }
-    btn2 += "</ol>";
-    $('.scro-focus2').append(btn2);
-    $(".scro-focus2 ul li").eq(0).show();
-    $(".scro-focus2 ol li").mouseover(function() {
-        index2 = $(".scro-focus2 ol li").index(this);
-        showPics2(index2);
+    btn4 += "</ol>";
+    $('.scro-focus4').append(btn4);
+    $(".scro-focus4 ul li").eq(0).show();
+    $(".scro-focus4 ol li").mouseover(function () {
+        index4 = $(".scro-focus4 ol li").index(this);
+        showPics4(index4);
     }).eq(0).trigger("mouseover");
 
-    $(".scro-focus2 ul").hover(function() {
-        clearInterval(picTimer2);
+    $(".scro-focus4 ul").hover(function () {
+        clearInterval(picTimer4);
     },
-    function() {
-        picTimer2 = setInterval(function() {
-            showPics2(index2);
-            index2++;
-            if (index2 == len2) {
-                index2 = 0;
-            }
-        },
-        3000);
-    }).trigger("mouseleave");
+        function () {
+            picTimer4 = setInterval(function () {
+                showPics4(index4);
+                index4++;
+                if (index4 == len4) {
+                    index4 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
 
-    function showPics2(index) {
-        $(".scro-focus2 li").eq(index).fadeIn().siblings().fadeOut();
-        $(".scro-focus2 ol li").removeClass("cur").eq(index).addClass("cur");
+    function showPics4(index) {
+        $(".scro-focus4 li").eq(index).fadeIn().siblings().fadeOut();
+        $(".scro-focus4 ol li").removeClass("cur").eq(index).addClass("cur");
     }
-});
- </script>
 
+</script>
 
-    
-    </html>
-    
+<script type="text/javascript">
+        //焦点图渐变切换
+        $(function () {
+            var len = $("#slidess ul li").length;
+            var index = 0;
+            var picTimer;
+            var btn = '<ol style="display:none">';
+            for (var i = 1; i <= len; i++) {
+                btn += "<li>" + i + "</li>";
+            }
+            btn += "</ol>";
+            // var bs = '<span class="slidelocal">1/'+len+'</span>';
+            $('#slidess').append(btn);
+            // $('#slidess').append(bs);
+            $("#slidess ul li").eq(0).show();
+             $("#slidess ul").hover(function () {
+                clearInterval(picTimer);
+            },
+            function () {
+                picTimer = setInterval(function () {
+                    showPics(index);
+                    index++;
+                    if (index == len) {
+                        index = 0;
+                    }
+                },
+                    3000);
+            }).trigger("mouseleave");
+          
+
+            var widthW = $(window).width();
+            
+
+            function showPics(index) {
+                $("#slidess ul li").eq(index).fadeIn().siblings().fadeOut();
+                $("#slidess ol li").removeClass("cur").eq(index).addClass("cur");
+            }
+
+            $("#scro-focus-prev").click(function () {
+                index--;
+                index = (index + len) % len;
+                showPics(index);
+                // var tlocal=index+1;
+                // $(".slidelocal").html(tlocal+'/'+len);
+            })
+            $("#scro-focus-next").click(function () {
+                index++;
+                index = (index + len) % len;
+                showPics(index);
+                // var tlocal=index+1;
+                // $(".slidelocal").html(tlocal+'/'+len);
+            })
+        });
+    </script>
+
+</html>

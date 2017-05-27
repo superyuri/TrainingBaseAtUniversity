@@ -1,0 +1,46 @@
+
+
+
+<stl:include file="/include/appointment.html"></stl:include>
+<stl:include file="/include/location.html"></stl:include>
+
+<script type="text/javascript" src="{stl.siteurl}/js/calendar/jquery-ui.min.js"></script>
+<!--<script type="text/javascript" src="{stl.siteurl}/js/calendar/app.min.js"></script>
+<script type="text/javascript" src="{stl.siteurl}/js/calendar/calendar.js"></script>-->
+<div class="appoint-con">
+<h2  id="courseName">{content.title}</h2>
+
+<div class="courseDes">
+  <h3 class="course-tit"><s></s> 项目介绍 </h3>
+  <p class="course-con"><stl:content type="Introduction"></stl:content></p>
+  <p class="course-con-li">培训规模：<stl:content type="Number"></stl:content>人</p>
+  <p class="course-con-li">培训时间：<stl:content type="ClassesTime"></stl:content>课时</p>
+  <p class="course-con-li">目标达成：<stl:content type="Achievements"></stl:content></p>
+  <p class="course-con-li">培训基础：<stl:content type="PotentialCustomers"></stl:content></p>
+</div>
+
+<!-- <div class="courseDes courseOrder"> -->
+  <!-- <h3 class="course-tit" id="orderCourse">预约项目<i class="up">></i></h3> -->
+  <div id="calendar" class="has-toolbar"> </div>
+<!-- </div> -->
+
+<script type="text/javascript" src="{stl.siteurl}/js/appointment.js"></script>
+<json style="display:none">
+ [
+    {
+        "title": "{content.StartTime}-{content.EndTime}",
+        "start": "{content.Date}T{content.StartTime}",
+        "end": "{content.Date}T{content.EndTime}",
+        "backgroundColor": "#F64914",
+        "className": "dialog_c "
+    }
+] 
+</json>
+<div id="diaForm" class="move">
+   <h3 class="form-tit">提交项目预约申请</h3>
+   <div class="closeCalendar"></div>
+   <stl:input inputName="基地预约"></stl:input>
+</div>
+  </div>
+<div class="grayBg"></div>
+<stl:include file="/include/footer.html"></stl:include>

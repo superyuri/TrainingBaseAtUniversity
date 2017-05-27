@@ -1,17 +1,77 @@
 <stl:include file="/include/header.html"></stl:include>
 
                         <div class="col-md-9 col-sm-9 col-xs-12 inform-right">
+                            <stl:contents totalNum="1">
                             <div class="session-part">
-                                <stl:contents totalNum="1">
-                                    <h3><stl:content type="Title"></stl:content></h3>
-                                    <span>{content.lastEditDate}&nbsp;&nbsp;来源：{content.source}</span>
-                                    {content.content}
-                                </stl:contents>
-                            </div>
-                        </div>
-
-                        <div class="col-md-offset-3 col-md-9 col-sm-12 col-xs-12">
-                            <span>上一篇：<a href="{stl.siteurl}/">省教育厅召开向应用型转变试点工作调研推进会</a></span>
+                                <h3>{stl.BaseName}简介</h3>
+                                    <stl:content type="content"></stl:content>
+                                <div class="table-spec">
+                                    <h3>基本条件</h3>
+                                       
+                                        <table>
+                                            <tr>
+                                                <td style="width:200px;">面积</td>
+                                                <td><stl:content type="Base_Area"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>投入设备总量</td>
+                                                <td><stl:content type="Base_Value"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>服务产业</td>
+                                                <td><stl:content type="Base_Service"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>模块</td>
+                                                <td style="text-align:left"><stl:content type="Base_Model"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>容纳人数</td>
+                                                <td><stl:content type="Base_Number"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                 <td row ="2" style="padding:0">
+                                                    <span>已培训</span>
+                                                    <span><s>在校生</s>  
+                                                    <s>企业员工</s></span>                            
+                                                </td>
+                                                <td style="padding:0">
+                                                    <s class="sp-row"><stl:content type="Base_Student"></stl:content></s>
+                                                    <s class="sp-row"><stl:content type="Base_Employee"></stl:content></s>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>启用时间</td>
+                                                <td><stl:content type="Base_StartTime"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>面向产业</td>
+                                                <td><stl:content type="Target_Industry"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>新增面积</td>
+                                                <td><stl:content type="Target_Newarea"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>拟增设备金额</td>
+                                                <td><stl:content type="Target_Amount"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>增设生产线、模块</td>
+                                                <td><stl:content type="Target_Module"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>净赠容纳人数</td>
+                                                <td><stl:content type="Target_Number"></stl:content></td>
+                                            </tr>
+                                            <tr>
+                                                <td>建成后容纳总人数</td>
+                                                <td><stl:content type="Target_Total"></stl:content></td>
+                                            </tr>
+                                        </table>
+                                    </div> 
+                                </div>
+                            </stl:contents>
                         </div>
                     </div>    
                 </div>

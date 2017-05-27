@@ -1,0 +1,259 @@
+.appoint-con{
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+}
+#calendar{
+    /*width: 95%;*/
+    width: 100%;
+    max-width: 850px;
+    height: 680px;
+    margin: 30px auto;
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    border-radius: 15px;
+    opacity: 1;
+}
+.closeCalendar{
+    position: absolute;
+    right: -10px;
+    top:-10px;
+    background: url(../images/close.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.fc-toolbar{
+    padding: 20px;
+    background: #0285eb;
+    color: #fff;
+    margin-bottom: 0 !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+button{
+    outline: none !important; 
+}
+.fc-toolbar .fc-right button,.fc button .fc-icon{
+    color: #0285eb;
+    outline: none !important;
+}
+.fc .fc-toolbar .fc-button-group button:hover,.fc .fc-toolbar .fc-button-group button:active{
+    background:#00448d;
+}
+/*.fc-state-highlight{
+    color: #fff !important;
+}*/
+.fc-view-container{
+    padding: 0 20px 20px;
+}
+.fc td, .fc th{
+    color: #333;
+    font-weight: normal !important; 
+}
+.fc .fc-toolbar>.fc-left h2{
+    font-size:22px;
+}
+#calendar .dialog_c{
+    cursor: pointer;
+}
+#calendar .fc-event{
+    border: none;
+}
+#calendar .fc-day-grid-event{
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.courseDes{
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    min-height: 300px;
+    margin: 0 auto 30px;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.courseDes h3.course-tit{
+    width: 100%;
+    height: 36px;
+    line-height: 26px;
+    font-size: 24px;
+    text-indent: 10px;
+    border-bottom: 1px dotted #ddd;
+}
+.courseDes h3.course-tit s{
+    width:2px;
+    height: 26px;
+    display: inline-block;
+    background: #01448b;
+    float: left;
+}
+.courseDes p{
+    font-size: 14px;
+    line-height: 22px;
+    text-indent: 2em;
+}
+.courseDes p.course-con-li{
+    font-size: 16px;
+    background: url(../images/icon-rll.png) left no-repeat;
+    padding-left: 20px;
+    text-indent: 0;
+}
+.courseDes.courseOrder{
+    /*height: 50px;*/
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+    color: #fff;
+}
+.courseDes.courseOrder h3{
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    line-height: 50px;
+    border:none;
+    cursor: pointer;
+    background: #0285eb;
+}
+.courseDes.courseOrder h3.course-tit i{
+    cursor: pointer;
+}
+.courseDes.courseOrder h3.course-tit i.up{
+    text-decoration: none;
+    font-style: normal;
+    font-family: "宋体";
+    float: right;
+    /*margin-top:5px;*/
+    margin-right: 22px;
+    /*transform: rotate(-90deg);
+    -ms-transform:rotate(-90deg);     /* IE 9 */
+    /*-moz-transform:rotate(-90deg);    /* Firefox */
+    /*-webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+    /*-o-transform:rotate(-90deg);  /* Opera */
+}
+.courseDes.courseOrder h3.course-tit i.down{
+    text-decoration: none;
+    font-style: normal;
+    font-family: "宋体";
+    float: right;
+    margin-top:-5px;
+    margin-right: 22px;
+    transform: rotate(90deg);
+    -ms-transform:rotate(90deg);     /* IE 9 */
+    -moz-transform:rotate(90deg);    /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg);  /* Opera */
+}
+#diaForm{
+    width: 100%;
+    max-width: 570px;
+    height: 550px;
+    margin: 20px auto;
+    display: none;
+    background: #fff;
+    position: fixed;
+    top:20%;
+    left:calc(50% - 285px);
+    z-index: 999;
+    border:1px solid #999;
+    border-radius: 15px;
+    padding: 0 0 20px;
+}
+
+#diaForm .form-tit{
+    width: 100%;
+    height: 40px;
+    margin:0;
+    padding: 0;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #0285eb;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: #fff;
+}
+#diaForm table{
+    margin: 10px;
+}
+#diaForm table tr td{
+    height: 30px;
+    padding: 10px 0;
+}
+#diaForm table tr nobr {
+    margin-left: 45px;
+}
+#diaForm table tr input {
+    height: 34px;
+    margin-left: 30px;
+    outline: none !important;
+    padding: 0 5px;
+}
+
+#diaForm table td {
+    height:60px;
+    line-height: 30px;
+    text-align: left;
+}
+#diaForm table tr:nth-child(8) td:first-child{
+    padding-left: 45px;
+}
+#diaForm input.is_btn{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+#diaForm input.is_btn:hover{
+    background: #ddd;
+}
+#diaForm input.is_btn[type="button"]{
+    background: #F64914;
+    color: #fff;
+    border: 1px solid #F64914;
+}
+#diaForm input.is_btn[type="button"]:hover{
+    background: #f93a00;
+}
+.grayBg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 88;
+    background: rgba(0,0,0,.6);
+    left: 0;
+    top: 0;
+    display: none;
+}
+#courseName{
+    width: 100%;
+    max-width: 850px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 22px;
+   /* border-left: 2px solid #01448b;
+    text-indent: 10px;*/
+   /* padding:0 20px;
+    box-sizing: border-box;*/
+}
+.fc-day-grid-event .fc-time{
+    display: none;
+}
+@media (max-width: 600px) {
+    #diaForm{
+        width: 100%;
+        top:0px;
+        left:0;
+    }
+    #diaForm table tr input{
+        margin-left: 0;
+    }
+}

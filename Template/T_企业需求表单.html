@@ -1,0 +1,122 @@
+<stl:include file="/include/top.html"></stl:include>
+<div class="location">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="title-line-a col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                    <span class="title-line-c"><img src="{stl.siteurl}/images/here.png" class="img-responsive"/>当前位置：&nbsp; > <a href="{stl.siteurl}">&nbsp;{stl.siteName}</a>&nbsp; > &nbsp;<a href="{stl.siteurl}/single/requirement.html">企业需求</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+  /*表单样式修改 开始*/
+table {
+    width: 1000px;
+    margin:0 auto;
+    border-top:40px solid #fff;
+    border-collapse: inherit;
+}
+table tr nobr {
+    margin-left: 95px;
+}
+table tr input{
+    height: 40px;
+}
+table tr input[type="button"],table tr input[type="reset"]{
+    background: #f56425;
+    border:1px solid #f56425;
+    color: #fff;
+    font-size: 18px;
+    width: 145px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+}
+table tr input[type="button"]:hover{
+    background: #fd5106;
+     border:1px solid #fd5106;
+}
+table tr input[type="reset"]{
+    background: #439cf6;
+    border:1px solid #439cf6;
+    margin-left: 10px;
+}
+table tr input[type="reset"]:hover{
+    background: #2287ec;
+     border:1px solid #2287ec;
+}
+table tr input,table tr td textarea{
+  padding:0 10px;
+  }
+table tr input ,table tr td select,table tr td textarea{
+    margin-left: 30px;
+    outline: none;
+}
+table tr input:focus,table tr td textarea:focus{
+  border:1px solid #ff834d;
+}
+table td {
+    height:60px;
+    line-height: 30px;
+    text-align: left;
+}
+table tr td:first-child{
+  text-align:right;
+  }
+table tr:nth-child(6){
+    padding-top:10px;
+}
+table tr:nth-child(8)  td:nth-child(2){
+    font-size: 18px;
+  }
+table tr span.red{
+    color: red;
+    margin-right: 5px;
+   }
+/*表单样式修改 结束*/ </style>
+<stl:input inputName="企业需求"></stl:input>
+
+<stl:include file="/include/footer.html"></stl:include>
+<script>    
+    $("table tr:eq(5) td:eq(0)").css({"display":"table-row"});
+    $("table tr:eq(6) td:eq(0)").prepend("<span class='red'>*</span>");
+    $("table tr td:first-child").find("nobr").prepend("<span class='red'>*</span>");
+    $("table tr:eq(5)").css("height","100px");
+    $("table tr:eq(5) td:eq(0)").css("line-height","40px");
+    $("table tr:eq(6) td").css("padding","0");
+    $("#validateCode").css("width","120px");
+    $("table tr:eq(5) td:eq(1) input").css({
+        "height":"50px",
+        "width":"170px",
+        "margin-bottom":"20px",
+        "background-color":"#3879D9",
+        "border":"1px solid #00448C",
+        "color":"#fff",
+        "font-size":"18px",
+        "margin-top":"10px"
+    });
+
+    $("#OrgName").attr("placeholder","请输入企业名称");
+    $("#Name").attr("placeholder","请输入真实姓名");
+    $("#Tel").attr("placeholder","请输入有效电话");
+    $("#Email").attr("placeholder","请输入联系邮箱");
+    $("#Title").attr("placeholder","请输入课程题目");
+    $("#Summary").attr("placeholder","请输入课程需求描述");
+    $("footer").addClass("navbar-fixed-bottom")
+    $(document).ready(function() {
+        var ww = $(window).width();
+        if (ww >= 320 && ww <= 414){
+            $('table tr nobr').css('margin-left', '0');
+            $('table').css('width', '100%');
+            $('table tr').find('td:eq(1) input').css('width','88px');
+            $('table tr:eq(4) td:eq(0)').css({'text-align':'left'});
+            $('table tr:eq(5) td:eq(1) input').css({'margin-left':'10px'});
+        }
+        if (ww > 414 && ww <= 768){
+            $('table').css('width', '100%');
+
+        }
+    });</script>
