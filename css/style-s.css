@@ -1345,7 +1345,7 @@ li.cour-list-item p.c-item-uname{
     }
     .inform-right #slides{
        width: 100%;
-       height: 315px;
+       height: 345px;
        overflow: hidden;
        border-bottom: 0;
        position: relative;
@@ -1397,12 +1397,15 @@ li.cour-list-item p.c-item-uname{
         margin-top:-25px;
     }
     .inform-right #slides ul li img{
-       width: 100%;
-       height: 240px;
+       width: 430px;
+       height: 248px;
     }
    
 }
 .s-header,.location .container,.inform .inform-left,header .header-nav{
     max-width: 1200px;
     margin: 0 auto;
+}
+.spec-conBox{
+    margin-top:20px;
 }

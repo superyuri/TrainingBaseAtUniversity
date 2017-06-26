@@ -11222,23 +11222,6 @@ $(function(){
             });
                  return dataArr;
     }
-    function getNowTime() {
-        var date = new Date();
-        var seperator1 = "-";
-        var seperator2 = ":";
-        var month = date.getMonth() + 1;
-        var strDate = date.getDate();
-        if (month >= 1 && month <= 9) {
-            month = "0" + month;
-        }
-        if (strDate >= 0 && strDate <= 9) {
-            strDate = "0" + strDate;
-        }
-        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-                + " " + date.getHours() + seperator2 + date.getMinutes()
-                + seperator2 + date.getSeconds();
-        return currentdate;
-    }
     
     
     // var getDataMsg = function (){
@@ -11318,21 +11301,46 @@ $(function(){
  
     $(".move").draggable({ containment: "body", scroll: false });
 
+    function getNowTime() {
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        //var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+                //+ " " + date.getHours() + seperator2 + date.getMinutes()
+                //+ seperator2 + date.getSeconds();
+       var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
+        return currentdate;
+    }
+    
     //json数据
     function getJsonData(){
          var dataArr = new Array();
          var data=$("Json").html();
          var result= $.parseJSON(data);
-        //  for(var i=0;i<result.length;i++){
-        //     var data = {};
-        //     data.title = result[i].title;
-        //     data.start = result[i].start;
-        //     data.end = result[i].end;
-        //     // data.allDay = true,
-        //     data.backgroundColor = result[i].backgroundColor;
-        //     dataArr[i]=data;
-        // }
-        return result;
+         for(var i=0;i<result.length;i++){
+            var data = {};
+            data.start = result[i].start;
+            data.end = result[i].end;
+            if(data.start.split("T")[0]<getNowTime()){
+                data.title=result[i].title+"不可预约";
+                data.className = "old_time";
+            }
+            else{
+                data.title = result[i].title+"可预约";
+                data.className = result[i].className;
+                data.backgroundColor = result[i].backgroundColor;
+            }
+            dataArr[i]=data;
+        }
+        return dataArr;
 
     }
     
@@ -11372,7 +11380,7 @@ $(function(){
                         var startT=event.start.format('HH:mm');
                         var endT=event.end.format('HH:mm');
                         $("#Date").val(dateT);
-                        $("#Time").val(startT+"~"+endT);
+                        $("#Time").val(startT+"-"+endT);
                         $("#CourseName").val($("#courseName").html());
                     }　　　　
                 }

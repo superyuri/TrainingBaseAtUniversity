@@ -58,6 +58,9 @@ button{
 #calendar .dialog_c{
     cursor: pointer;
 }
+#calendar .fc-event.old_time{
+    background: #9c9494;
+}
 #calendar .fc-event{
     border: none;
 }
@@ -256,4 +259,7 @@ button{
     #diaForm table tr input{
         margin-left: 0;
     }
+}
+.fc-day-grid-event .fc-content{
+    white-space: normal;
 }
