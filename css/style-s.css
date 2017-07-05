@@ -816,7 +816,7 @@ li.cour-list-item p.c-item-uname{
     padding: 0;
 }
 .kk-main .b-con-rig ul li p.xm-tit{
-    width: 30%;
+    width: 50%;
     display: inline-block;
     margin: 0;
     float: left;
@@ -833,7 +833,7 @@ li.cour-list-item p.c-item-uname{
     display: inline;
 }
 .kk-main .b-con-rig ul li p.xm-model{
-    width: 50%;
+    width: 30%;
     height: 40px;
     display: inline-block;
     margin: 0;
