@@ -11242,8 +11242,10 @@ $(function(){
 
     //选择可预约日期，显示预约form
     $("#calendar").on('click','.dialog_c',function(){
-        $(".grayBg").show();
-        $("#diaForm").show();
+        // $(".grayBg").show();
+        // $("#diaForm").show();
+        var link=$("#courseUrl").attr("data-link");
+        window.open(link);
     })
 	//关闭表单
      $("body").on("click",".closeCalendar",function(){
@@ -11329,7 +11331,7 @@ $(function(){
             var data = {};
             data.start = result[i].start;
             data.end = result[i].end;
-            if(data.start.split("T")[0]<getNowTime()){
+            if(data.start.split("T")[0]<=getNowTime()){
                 data.title=result[i].title+"不可预约";
                 data.className = "old_time";
             }

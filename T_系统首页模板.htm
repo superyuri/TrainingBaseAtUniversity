@@ -62,7 +62,7 @@
                             <div class="a-right col-md-7 col-sm-8 col-xs-12">
                                 <ul class="col-md-12 col-sm-12 col-xs-12">
                                     <!-- 基地动态置顶 -->
-                                    <stl:contents ChannelIndex="基地动态" totalNum="1" isTop="true">
+                                    <stl:contents ChannelIndex="基地动态" totalNum="1" isTop="true" order="Default">
                                         <h5 class="text-center">
                                             <stl:a>
                                                 <stl:content type="Title" wordNum="20"></stl:content>
@@ -70,7 +70,7 @@
                                         </h5>
                                     </stl:contents>
                                     <!-- 基地动态 -->
-                                    <stl:contents ChannelIndex="基地动态" totalNum="6" isTop="false">
+                                    <stl:contents ChannelIndex="基地动态" totalNum="6" isTop="false" order="Default">
                                         <li>
                                             <stl:a>
                                                 <stl:content type="Title" wordNum="18"></stl:content>
@@ -131,162 +131,6 @@
         </div>
     </div>
 </div>
-<!--基地课程-->
-<!--div class="row">
-    <div class="container">
-        <div class="base col-md-12 col-sm-12 col-xs-12">
-            <div class="b-main col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-                <div class="b-show col-md-4 col-md-offset-1 col-sm-12 col-xs-12" style="float:left">
-                    <div class="row">
-                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
-                            <h4>热门课程</h4>
-                            <stl:a channelIndex="基地课程">查看更多&gt;&gt;</stl:a>
-                        </div>
-                        <div class="a-cen-course col-md-7 col-sm-8 col-xs-12">
-                            <ul class="col-md-12 col-sm-12 col-xs-12">
-                                <stl:contents ChannelIndex="基地课程" totalNum="8" isTop="false">
-                                    <li>
-                                        <stl:a>
-                                            <stl:content type="Title" wordNum="18"></stl:content>
-                                        </stl:a>
-                                    </li>
-                                </stl:contents>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="b-active col-md-7 col-sm-12 col-xs-12" style="float:right;padding:0">
-                    <div class="row">
-                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
-                            <h4>基地课程</h4>
-                            <stl:a channelIndex="基地课程">查看更多&gt;&gt;</stl:a>
-                        </div>
-                        <div class="a-main col-md-12 col-sm-12 col-xs-12">
-
-                            <div class="scro-focus scro-focus3">
-                                <ul>
-                                    <stl:contents ChannelIndex="基地课程" totalNum="5">
-                                        <li>
-                                            <div class="scro-blo">
-                                                <div class="scro-img">
-                                                    <img src="{content.imageUrl}" alt="{content.title}">
-                                                </div>
-                                                <div class="scrodes">
-                                                    <strong><stl:content type="title"></stl:content></strong>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </stl:contents>
-
-                                </ul>
-                            </div>
-                            <div class="a-right col-md-7 col-sm-8 col-xs-12">
-                                <ul class="col-md-12 col-sm-12 col-xs-12">
-                                    <!-- 基地课程置顶 -->
-                                    <!--stl:contents ChannelIndex="基地课程" totalNum="1" isTop="true">
-                                        <h5 class="text-center">
-                                            <stl:a>
-                                                <stl:content type="Title" wordNum="20"></stl:content>
-                                            </stl:a>
-                                        </h5>
-                                    </stl:contents>
-                                    <!-- 基地课程 -->
-                                    <!--stl:contents ChannelIndex="基地课程" totalNum="6">
-                                        <li>
-                                            <stl:a>
-                                                <stl:content type="Title" wordNum="20"></stl:content>
-                                            </stl:a>
-                                        </li>
-                                    </stl:contents>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 校企合作 -->
-<!--div class="row">
-    <div class="container">
-        <div class="base col-md-12 col-sm-12 col-xs-12">
-            <div class="b-main col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-                <div class="b-active col-md-7 col-sm-12 col-xs-12" style="padding:0;">
-                    <div class="row">
-                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
-                            <h4>校企合作</h4>
-                            <stl:a channelIndex="校企合作">查看更多&gt;&gt;</stl:a>
-                        </div>
-                        <div class="a-main col-md-12 col-sm-12 col-xs-12">
-                            <div class="scro-focus scro-focus4">
-                                <ul>
-                                    <stl:contents ChannelIndex="校企合作" totalNum="5">
-                                        
-                                        <li style="display: none;">
-                                            <stl:a title="{content.title}">
-                                                <div class="scro-blo">
-                                                    <div class="scro-img">
-                                                        <img src="{content.imageUrl}" alt="{content.title}">
-                                                    </div>
-                                                    <div class="scrodes">
-                                                        <stl:content type="title" WordNum=""></stl:content>
-                                                    </div>
-                                                </div>
-                                            </stl:a>
-                                        </li>
-                                    </stl:contents>
-                                </ul>
-                            </div>
-                            <div class="a-right col-md-7 col-sm-8 col-xs-12">
-                                <ul class="col-md-12 col-sm-12 col-xs-12">
-                                    <!-- 校企合作置顶 -->
-                                    <!--stl:contents ChannelIndex="校企合作" totalNum="1" isTop="true">
-                                        <h5 class="text-center">
-                                            <stl:a>
-                                                <stl:content type="Title" wordNum="20"></stl:content>
-                                            </stl:a>
-                                        </h5>
-                                    </stl:contents>
-                                    <!-- 校企合作 -->
-                                    <!--stl:contents ChannelIndex="校企合作" totalNum="6">
-                                        <li>
-                                            <stl:a>
-                                                <stl:content type="Title" wordNum="20"></stl:content>
-                                            </stl:a>
-                                        </li>
-                                    </stl:contents>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="b-show col-md-4 col-md-offset-1 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="b-header col-md-12 col-sm-12 col-xs-12">
-                            <h4>企业需求</h4>
-                            <stl:a channelIndex="企业需求">查看更多&gt;&gt;</stl:a>
-                        </div>
-                        <div class="a-cen-course col-md-7 col-sm-8 col-xs-12">
-                            <ul class="col-md-12 col-sm-12 col-xs-12">
-                                <stl:contents ChannelIndex="企业需求" totalNum="7">
-                                    <li>
-                                        <stl:a>
-                                            <stl:content type="title" WordNum="20"></stl:content>
-                                        </stl:a>
-                                    </li>
-                                </stl:contents>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div-->
 
 <div class="row">
     <div class="container">

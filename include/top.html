@@ -11,6 +11,47 @@
     <link rel="stylesheet" type="text/css" href="{stl.siteurl}/css/style-s.css" />
     <script src="{stl.siteurl}/js/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="{stl.siteurl}/js/bootstrap.min.js"></script>
+<style>
+.carousel-indicators li {
+    text-indent: -9999px;
+}
+.page-spec-login{
+  height:32px;
+  overflow:hidden;
+  position: relative;
+  top:10px;
+ z-index:999;
+}
+.page-spec-login img{
+  vertical-align: top;
+}
+.page-spec-loginlf{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 2px 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 1px solid transparent;
+    line-height: 25px;
+}
+.page-spec-loginls{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top:31px;
+    left: 0;
+    padding: 2px 15px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    line-height: 25px;
+}
+.page-spec-login a,.page-spec-login a:active,.page-spec-login a:visted{
+   text-decoration: none;
+}
+</style>
 </head>
 <body class="sysf">
     <div class="container">
@@ -22,10 +63,14 @@
                               <h1 class="col-md-6 col-sm-12 col-xs-12"><img src="{stl.siteurl}/images/logo1.png"></h1>
                          </stl:a>
                     </div>
-                    <div class="page-login col-md-3 col-sm-4 col-xs-12">
-                        <stl:a href="~/manager" target="_blank">
-                           <img src="{stl.siteurl}/images/login.png" alt="login" />登录平台
-                        </stl:a>
+                    <div class="page-login col-md-3 col-sm-4 col-xs-12 page-spec-login">
+                        <div class="page-spec-loginlf">
+                            <img src="{stl.siteurl}/images/login.png" alt="login" />
+                            <stl:a style="display:inline-block" href="http://edudept.chinacloudapp.cn:85/">登录平台</stl:a>
+                        </div>
+                        <div class="page-spec-loginls">
+                            <stl:a style="display:inline-block" href="~/manager">登录管理平台</stl:a>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -42,3 +87,18 @@
                 </div>
             </header>
         </div>
+<script>
+$(function(){
+    $(".page-spec-login").hover(function(){
+        $(this).css("overflow","visible");
+        $(".page-spec-loginlf").css("background","#c9f0ff");
+        $(".page-spec-loginlf").css("border-bottom","1px solid #3299d2");
+        $(".page-spec-loginls").css("background","#c9f0ff");
+    },function(){
+        $(this).css("overflow","hidden");
+        $(".page-spec-loginlf").css("background","transparent");
+        $(".page-spec-loginlf").css("border-bottom","1px solid transparent");
+        $(".page-spec-loginls").css("background","transparent");
+    })
+})
+</script>

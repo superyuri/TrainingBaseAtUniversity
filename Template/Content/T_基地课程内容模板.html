@@ -10,7 +10,7 @@
 <div class="appoint-con">
 <h2  id="courseName">{content.title}</h2>
 
-<div class="courseDes">
+<div class="courseDes" id="courseUrl" data-link="http://edudept.chinacloudapp.cn:85/Home/Index?action=AppointmentAdd&id1={stl.siteId}&id2={content.Id}">
   <h3 class="course-tit"><s></s> 项目介绍 </h3>
   <p class="course-con"><stl:content type="Introduction"></stl:content></p>
   <p class="course-con-li">培训规模：<stl:content type="Number"></stl:content>人</p>
@@ -24,7 +24,9 @@
   <div id="calendar" class="has-toolbar"> </div>
 <!-- </div> -->
 
-<script type="text/javascript" src="{stl.siteurl}/js/appointment.js?v=20170614"></script>
+<script type="text/javascript" src="{stl.siteurl}/js/appointment.js?v=20170724"></script>
+<span id="link" style="display:none">http://localhost:1851/Home/Index?action=AppointmentAdd&id1={stl.siteId}&id2={content.Id}
+</span>
 <json style="display:none">
  [
     {
@@ -32,7 +34,7 @@
         "start": "{content.Date}T{content.StartTime}",
         "end": "{content.Date}T{content.EndTime}",
         "backgroundColor": "#F64914",
-        "className": "dialog_c "
+        "className": "dialog_c"
     }
 ] 
 </json>
